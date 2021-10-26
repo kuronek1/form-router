@@ -11,8 +11,8 @@ const initialValues = {
     email: "",
     password: "",
     confirmPassword: "",
-    radio: "",
-    checkbox: false,
+    role: "",
+    agreeTerms: false,
 };
 
 
@@ -43,30 +43,30 @@ export default function RegistrationForm(props) {
                         </div>
                         <div className={styles.divInput}>
                             <Field className={styles.field} type="password" name="password" placeholder="Password"/>
-                            <ErrorMessage component="div" name="password" className={styles.error}/>
+                            <ErrorMessage component="div" name="password" className={styles.error} />
                             <Field className={styles.field} type="password" name="confirmPassword" placeholder="Confirm Password"/>
                             <ErrorMessage component="div" name="confirmPassword" className={styles.error}/>
                         </div>
                         <div>
                             <div className={styles.checkbox}>
-                                <Field id='radio' className={styles.field} type="radio" name="radio" value="Join as a Buyer"/>
-                                <ErrorMessage component="div" name="radio" className={styles.error}/>
-                                <label for="radio" className={styles.label}>
+                                <Field id='role1' className={styles.field} type="radio" name="role" value="Join as a Buyer"/>
+                                <ErrorMessage component="div" name="role" className={styles.error}/>
+                                <label for="role1" className={styles.label}>
                                     <h4>Join As a Buyer</h4>
                                     <span>I am looking for a Name, Logo or Tagline for my business, brand or product.</span>
                                 </label>
                             </div>
                             <div className={styles.checkbox}>
-                                <Field id="radio" className={styles.field} type="radio" name="radio" value="Join As a Creative"/>
-                                <label for="radio" className={styles.label}>
+                                <Field id="role2" className={styles.field} type="radio" name="role" value="Join As a Creative"/>
+                                <label for="role2" className={styles.label}>
                                     <h4>Join As a Creative or Marketplace Seller</h4>
                                     <span>I plan to submit name ideas, Logo designs or sell names in Domain Marketplace.</span>
                                 </label>
                             </div>
                             <div className={styles.checkbox}>
-                                <Field id="checkbox" className={styles.field} type="checkbox" name="checkbox" />
-                                <ErrorMessage component="div" name="checkbox" className={styles.error}/>
-                                <label htmlFor="checkbox">Allow Squadhelp to send marketing/promotional offers from time to time</label>
+                                <Field id="agreeTerms" className={styles.field} type="checkbox" name="agreeTerms" />
+                                <ErrorMessage component="div" name="agreeTerms" className={styles.error}/>
+                                <label htmlFor="agreeTerms">Allow Squadhelp to send marketing/promotional offers from time to time</label>
                             </div>
                         </div>
 
